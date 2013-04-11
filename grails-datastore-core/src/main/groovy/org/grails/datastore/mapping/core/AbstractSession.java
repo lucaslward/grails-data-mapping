@@ -714,6 +714,10 @@ public abstract class AbstractSession<N> extends AbstractAttributeStoringSession
         return transaction;
     }
 
+    public ApplicationEventPublisher getPublisher() {
+        return publisher;
+    }
+
     private Map<Serializable, Object> getInstanceCache(Class c) {
         Map<Serializable, Object> cache = firstLevelCache.get(c);
         if (cache == null) {

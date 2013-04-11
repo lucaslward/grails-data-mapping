@@ -1,0 +1,12 @@
+dependencies {
+    compile project(":grails-datastore-gorm"),
+            project(":grails-datastore-gorm-plugin-support"),
+            project(":grails-datastore-mongo"),
+            project(":grails-datastore-core")
+    testCompile project(':grails-datastore-gorm-test'),
+                project(':grails-datastore-gorm-tck')
+    testRuntime 'javax.servlet:servlet-api:2.5'
+    testRuntime "org.grails:grails-web:$grailsVersion"
+
+    compile 'org.elasticsearch:elasticsearch:0.90.0.RC1'
+}
